@@ -1,8 +1,8 @@
-import * as path from "path";
-import * as webpack from "webpack";
+import path from "path";
+import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 
-module.exports = {
+const config: webpack.Configuration = {
   mode: "production",
 
   entry: path.resolve(__dirname, "src", "index.tsx"),
@@ -32,3 +32,5 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"],
   },
 };
+
+export default config;
