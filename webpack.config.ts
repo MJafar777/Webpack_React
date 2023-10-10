@@ -1,13 +1,11 @@
-const path = require("path");
-
-const webpack = require("webpack");
-
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+import * as path from "path";
+import * as webpack from "webpack";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
 module.exports = {
   mode: "production",
 
-  entry: path.resolve(__dirname, "src", "index.ts"),
+  entry: path.resolve(__dirname, "src", "index.tsx"),
 
   output: {
     filename: "[name].[contenthash].ts",
