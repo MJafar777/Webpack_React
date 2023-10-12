@@ -9,7 +9,9 @@ module.exports = {
       env: {
         node: true,
       },
-      files: [".eslintrc.{js,cjs}"],
+      // files: [".eslintrc.{js,cjs}"],
+      files: ["**/*.ts", "**/*.tsx"],
+      extends: ["plugin:@typescript-eslint/recommended"],
       parserOptions: {
         sourceType: "script",
       },
@@ -28,6 +30,6 @@ module.exports = {
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
     "no-unused-vars": "warn",
+    include: ["path/to/.eslintrc.js"],
   },
-  include: ["path/to/.eslintrc.js"],
 };
