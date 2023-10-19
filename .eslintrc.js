@@ -8,7 +8,7 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
-    'plugin: i18next/recommended',
+    // 'plugin: i18next/recommended',
   ],
   overrides: [
     {
@@ -26,7 +26,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "@typescript-eslint" , "i18next"],
+  plugins: ["react", "@typescript-eslint" ,"i18next"],
   settings: {
     react: {
       version: "detect",
@@ -48,9 +48,9 @@ module.exports = {
     "react/function-component-definition": "off",
     "no-shadow": "off",
     "no-underscore-dangle": "off",
-    'i18next/no-literal-string':['error' , {markupOnly: true}],
+    // 'i18next/no-literal-string':['error' , {markupOnly: true}],
   },
-  global :{
-    '__IS_DEV__': true
-  }
+  // global :{
+  //   '__IS_DEV__': true
+  // }
 };
