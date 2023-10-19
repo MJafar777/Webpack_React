@@ -3,7 +3,7 @@
     "outDir": "./dist/",
 
     "typeRoots": ["node_modules/@types"],
-    "types": ["bonjour"],
+    "types": ["jest", "bonjour"],
 
     // Подсвечивает все места где не указан тип
     // Однако это не означает, что теперь вовсе нельзя использовать any.
