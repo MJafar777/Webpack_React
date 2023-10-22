@@ -48,10 +48,25 @@ module.exports = {
     "react/function-component-definition": "off",
     "no-shadow": "off",
     "no-underscore-dangle": "off",
-    // 'i18next/no-literal-string':['error' , {markupOnly: true}],
+    'i18next/no-literal-string':[
+      'error' ,
+      {
+        markupOnly: true ,
+        ignoreAttribute:['data-testId']
+      },
+       ],
   },
   'max-len': ['error', { ignoreComments: true, code: 100 }],
   // global :{
   //   '__IS_DEV__': true
   // }
+  overides :[
+    {
+      files:['**/src/**/*.test.{ts,tsx}'],
+      rules:
+      {
+        'i18next/no-literal-string':'off',
+      }
+    }
+  ]
 };
