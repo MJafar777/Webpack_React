@@ -1,9 +1,8 @@
+import { classNames } from 'shared/lib/classNames/classNames';
 import './Loader.scss';
 import React from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
-
 interface LoaderProps {
-    className?: string;
+  className?: string
 }
 
 export const Loader = ({ className }: LoaderProps) => (

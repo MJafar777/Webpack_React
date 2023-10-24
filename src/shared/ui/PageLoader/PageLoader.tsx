@@ -1,10 +1,9 @@
-import React from 'react';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { Loader } from 'shared/ui/Loader/Loader';
 import cls from './PageLoader.module.scss';
-import { Loader } from '../../ui/Loader/Loader';
-import { classNames } from '../../lib/classNames/classNames';
-
+import React from 'react';
 interface PageLoaderProps {
-    className?: string;
+  className?: string
 }
 
 export const PageLoader = ({ className }: PageLoaderProps) => (
