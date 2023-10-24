@@ -25,7 +25,12 @@ jobs:
       run: npm start
 
     - name: Build
-      run: npm build:prod  
+      run: npm build:prod 
+       
+    - name: EsLint ts/tsx
+      run: npm lint:ts  
 
+    - name: Eslint scss
+      run: npm lint:scss  
  
 
