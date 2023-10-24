@@ -16,7 +16,7 @@
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "test:ui": "npx loki test",
     "test:ui:ok": "npx loki approve",
-    "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static",
+    "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
     "test:ui:report": "npm run test:ui:json && npm run test:ui:html",
     "test:ui:json": "node scripts/generate-visual-json-report.js",
     "test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html",
@@ -96,7 +96,6 @@
     "i18next": "^21.6.11",
     "i18next-browser-languagedetector": "^6.1.3",
     "i18next-http-backend": "^1.3.2",
-    "loki": "^0.32.0",
     "postcss-scss": "^4.0.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -109,12 +108,14 @@
   "loki": {
     "configurations": {
       "chrome.laptop": {
-        "target": "chrome.docker",
+        "target": "chrome.app",
         "width": 1366,
-        "height": 768
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false
       },
       "chrome.iphone7": {
-        "target": "chrome.docker",
+        "target": "chrome.app",
         "preset": "iPhone 7"
       }
     }
