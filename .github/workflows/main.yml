@@ -18,24 +18,31 @@ jobs:
       with:
         node-version: 14
 
+      if: always()
     - name: Install dependencies
       run: npm install
 
+      if: always()
     - name: Run tests
       run: npm start
 
+      if: always()
     - name: Build
       run: npm build:prod 
-       
+ 
+      if: always()
     - name: EsLint ts/tsx
       run: npm lint:ts  
 
+      if: always()
     - name: Eslint scss
       run: npm lint:scss 
-      
+
+      if: always()
     - name: build Storybook
       run: npm storybook:build 
       
+      if: always()
     - name: screenshot testings
       run: npm test:ui:ci  
  
