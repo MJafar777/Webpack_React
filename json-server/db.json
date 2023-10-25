@@ -21,17 +21,15 @@
   "users": [
     {
       "id": "1",
-      "username": "MJafar777",
-      "password": "Jmgjmg2001@#"
+      "username": "admin",
+      "password": "admin"
     }
   ],
   "profile": {
     "first": "Jafar",
     "lastname": "MJafar777",
     "age": 24,
-    "currency": "USD",
-    "country": "Armenia",
-    "city": "Moscow",
+    "city": "Tashkent",
     "username": "admin",
     "avatar": "https://avatars.githubusercontent.com/u/94430558?v=4"
   }
