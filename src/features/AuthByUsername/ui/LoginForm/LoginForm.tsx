@@ -1,22 +1,23 @@
-import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import { Input } from 'shared/ui/Input/Input';
 import { useSelector } from 'react-redux';
+import cls from './LoginForm.module.scss';
+import { Input } from 'shared/ui/Input/Input';
+import { useTranslation } from 'react-i18next';
 import React, { memo, useCallback } from 'react';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { loginActions, loginReducer } from '../../model/slice/loginSlices';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
+import { loginByUsername } from '../../model/services/loginByUsername/loginByUsernames';
+import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
+import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
+import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
 import {
   DynamicModuleLoader,
   type ReducersList
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
-import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
-import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
-import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
-import { loginByUsername } from '../../model/services/loginByUsername/loginByUsernames';
-import cls from './LoginForm.module.scss';
-import { loginActions, loginReducer } from '../../model/slice/loginSlices';
+
 export interface LoginFormProps {
   className?: string
   onSuccess: () => void
@@ -29,10 +30,10 @@ const initialReducers: ReducersList = {
 const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
   const { t } = useTranslation();
   const dispatch = useAppDispatch();
+  const error = useSelector(getLoginError);
   const username = useSelector(getLoginUsername);
   const password = useSelector(getLoginPassword);
   const isLoading = useSelector(getLoginIsLoading);
-  const error = useSelector(getLoginError);
 
   const onChangeUsername = useCallback(
     (value: string) => {

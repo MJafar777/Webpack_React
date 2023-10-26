@@ -1,12 +1,13 @@
 import React from 'react';
-import { type ComponentMeta, type ComponentStory } from '@storybook/react';
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
-import ProfilePage from 'pages/ProfilePage/ui/ProfilePage';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Country } from 'myEntities/Country';
 import { Currency } from 'myEntities/Currency';
-import Avatar from '../../../shared/assets/test/storybook.jpg'
+import { Theme } from 'app/providers/ThemeProvider';
+import ProfilePage from 'pages/ProfilePage/ui/ProfilePage';
+// import Avatar from '../../../shared/assets/test/storybook.jpg'
+
+import { type ComponentMeta, type ComponentStory } from '@storybook/react';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 export default {
   title: 'pages/ProfilePage',
   component: ProfilePage,
@@ -25,14 +26,14 @@ Normal.decorators = [
   StoreDecorator({
     profile: {
       form: {
-        username: 'Behzod',
-        lastname: 'hamroyev',
+        username: 'Jafar',
+        lastname: 'Mirzaraximov',
         country: Country.Armenia,
         currency:Currency.EUR,  
-        age: 23,
-        city: 'firs',
-        first: 'sklsd',
-        avatar: Avatar
+        age: 24,
+        city: 'tashkent',
+        first: '',
+        avatar: 'https://avatars.githubusercontent.com/u/94430558?v=4'
       }
     }
   })
@@ -45,14 +46,14 @@ Dark.decorators = [
   StoreDecorator({
     profile: {
       form: {
-        username: 'Behzod',
-        lastname: 'hamroyev',
+        username: 'Jafar',
+        lastname: 'Mirzaraximov',
         country: Country.Armenia,
         currency:Currency.EUR,  
-        age: 23,
-        city: 'firs',
-        first: 'sklsd',
-        avatar: Avatar
+        age: 24,
+        city: 'Tashkent',
+        first: '',
+        avatar: 'https://avatars.githubusercontent.com/u/94430558?v=4'
       }
     }
   }) 

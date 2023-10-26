@@ -4,24 +4,26 @@ import {
   type ReducersList
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import {
-  fetchProfileData,
-  getProfileError,
-  getProfileForm,
-  getProfileIsLoading,
-  getProfileReadonly,
-  getProfileValidateError,
-  profileActions,
   ProfileCard,
-  profileReducer
+  getProfileForm,
+  profileActions,
+  profileReducer,
+  getProfileError,
+  fetchProfileData,
+  getProfileReadonly,
+  getProfileIsLoading,
+  getProfileValidateError
 } from 'myEntities/Profile';
-import React, { useCallback, useEffect } from 'react';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+
 import { useSelector } from 'react-redux';
-import { type Currency } from 'myEntities/Currency';
 import { type Country } from 'myEntities/Country';
-import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
+import { type Currency } from 'myEntities/Currency';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
+import React, { useCallback, useEffect } from 'react';
+import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
+
 import { ValidateProfileError } from 'myEntities/Profile/model/types/profile';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 const reducers: ReducersList = {
   profile: profileReducer
 };
@@ -46,7 +48,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     [ValidateProfileError.INCORRECT_AGE]:
       "Yosh haqidagi ma'lumot notogri kiritildi",
     [ValidateProfileError.INCORRECT_USER_DATA]:
-      "User ma'lumotlarini kiritishda xatolikka berdi",
+      "User ma'lumotlarini kiritishda xatolikka yo'l qo'yildi",
     [ValidateProfileError.INCORRECT_COUNTRY]: 'davlat tanlanmadi'
   };
   const getSelectorProfileErrors = useSelector(getProfileValidateError);
@@ -124,18 +126,18 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
           })
           : ''}
         <ProfileCard
-          data={formData}
-          isLoading={isLoading}
           error={error}
+          data={formData}
           readonly={readonly}
-          onChangeFirstname={onChangeFirstname}
-          onChangeLastname={onChangeLastname}
+          isLoading={isLoading}
           onChangeAge={onChangeAge}
           onChangeCity={onChangeCity}
-          onChangeUsername={onChangeUsername}
           onChangeAvatar={onChangeAvatar}
-          onChangeCurrency={onChangeCurrency}
           onChangeCountry={onChangeCountry}
+          onChangeUsername={onChangeUsername}
+          onChangeCurrency={onChangeCurrency}
+          onChangeLastname={onChangeLastname}
+          onChangeFirstname={onChangeFirstname}
         />
       </div>
     </DynamicModuleLoader>
