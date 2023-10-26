@@ -29,6 +29,7 @@ export function createReduxStore (
     reducer: reducerManager.reduce as Reducer<CombinedState<StateSchema>>,
     devTools: __IS_DEV__,
     preloadedState: initialState,
+   // middleware
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
       thunk: {
         extraArgument: extraArg
