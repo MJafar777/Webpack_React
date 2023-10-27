@@ -1,29 +1,30 @@
-import { classNames, type Mods } from 'shared/lib/classNames/classNames';
-import React, { type CSSProperties, useMemo } from 'react';
-import cls from './Avatar.module.scss';
-interface AvatarProps {
-  className?: string
-  src?: string
-  size?: number
-  alt?: string
-}
+  import cls from './Avatar.module.scss';
+  import React, { type CSSProperties, useMemo } from 'react';
+  import { classNames, type Mods } from 'shared/lib/classNames/classNames';
 
-export const Avatar = ({
-  className, src, size, alt
-}: AvatarProps) => {
-  const mods: Mods = {};
+  interface AvatarProps {
+    src?: string
+    alt?: string
+    size?: number
+    className?: string
+  }
 
-  const styles = useMemo<CSSProperties>(() => ({
-    width: size || 100,
-    height: size || 100
-  }), [size]);
+  export const Avatar = ({
+    className, src, size, alt
+  }: AvatarProps) => {
+    const mods: Mods = {};
 
-  return (
-        <img
-            src={src}
-            alt={alt}
-            style={styles}
-            className={classNames(cls.Avatar, mods, [className])}
-        />
-  );
-};
+    const styles = useMemo<CSSProperties>(() => ({
+      width: size || 100,
+      height: size || 100
+    }), [size]);
+
+    return (
+          <img
+              src={src}
+              alt={alt}
+              style={styles}
+              className={classNames(cls.Avatar, mods, [className])}
+          />
+    );
+  };

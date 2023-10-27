@@ -1,6 +1,6 @@
 import React from 'react';
-import { type ComponentMeta, type ComponentStory } from '@storybook/react';
 import { Select } from 'shared/ui/Select/Select';
+import { type ComponentMeta, type ComponentStory } from '@storybook/react';
 
 export default {
   title: 'shared/Select',
@@ -17,6 +17,7 @@ Primary.args = {
   label: 'Укажите значение',
   options: [
     { value: '123', content: 'Первый пункт' },
-    { value: '1234', content: 'Второй пункт' }
+    { value: '1234', content: 'Второй пункт' },
+    { value: '12345', content: 'Третый пункт' },
   ]
 };

@@ -1,16 +1,17 @@
-import { classNames } from "shared/lib/classNames/classNames";
-import { Text } from "shared/ui/Text/Text";
-import { Button, ButtonTheme } from "shared/ui/Button/Button";
-import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
+import { Text } from "shared/ui/Text/Text";
+import React, { useCallback } from "react";
+import { useTranslation } from "react-i18next";
+import cls from "./ProfilePageHeader.module.scss";
+import { classNames } from "shared/lib/classNames/classNames";
+import { Button, ButtonTheme } from "shared/ui/Button/Button";
+import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import {
   getProfileReadonly,
   profileActions,
   updateProfileData,
 } from "myEntities/Profile";
-import React, { useCallback } from "react";
-import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
-import cls from "./ProfilePageHeader.module.scss";
+
 interface ProfilePageHeaderProps {
   className?: string;
 }
@@ -36,35 +37,34 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
   }, [dispatch]);
 
   return (
-    // <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
-    //   <Text title={t("Профиль")} />
-    //   {readonly ? (
-    //     <Button
-    //       className={cls.editBtn}
-    //       theme={ButtonTheme.OUTLINE}
-    //       onClick={onEdit}
-    //     >
-    //       {t("Редактировать")}
-    //     </Button>
-    //   ) : (
-    //     <>
-    //       <Button
-    //         className={cls.editBtn}
-    //         theme={ButtonTheme.OUTLINE_RED}
-    //         onClick={onCancelEdit}
-    //       >
-    //         {t("Отменить")}
-    //       </Button>
-    //       <Button
-    //         className={cls.saveBtn}
-    //         theme={ButtonTheme.OUTLINE}
-    //         onClick={onSave}
-    //       >
-    //         {t("Сохранить")}
-    //       </Button>
-    //     </>
-    //   )}
-    // </div>
-    <></>
+    <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
+      <Text title={t("Профиль")} />
+      {readonly ? (
+        <Button
+          className={cls.editBtn}
+          theme={ButtonTheme.OUTLINE}
+          onClick={onEdit}
+        >
+          {t("Редактировать")}
+        </Button>
+      ) : (
+        <>
+          <Button
+            className={cls.editBtn}
+            theme={ButtonTheme.OUTLINE_RED}
+            onClick={onCancelEdit}
+          >
+            {t("Отменить")}
+          </Button>
+          <Button
+            className={cls.saveBtn}
+            theme={ButtonTheme.OUTLINE}
+            onClick={onSave}
+          >
+            {t("Сохранить")}
+          </Button>
+        </>
+      )}
+    </div>
   );
 };
