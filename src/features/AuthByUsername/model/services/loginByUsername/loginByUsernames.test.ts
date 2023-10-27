@@ -13,6 +13,7 @@ describe("loginByUsername.test", () => {
     expect(thunk.dispatch).toHaveBeenCalledWith(
       userActions.setAuthData(userValue)
     );
+    
     expect(thunk.api.post).toHaveBeenCalled();
     expect(result.payload).toEqual(userValue);
     expect(thunk.dispatch).toHaveBeenCalledTimes(3);

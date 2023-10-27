@@ -1,4 +1,4 @@
-import { type Profile } from '../../types/profile';
+import { type Profile } from '../../model/types/profile';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { type ThunkConfig } from 'app/providers/StoreProvider';
 
