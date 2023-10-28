@@ -4,12 +4,12 @@ import { Input } from 'shared/ui/Input/Input';
 import { useTranslation } from 'react-i18next';
 import { Loader } from 'shared/ui/Loader/Loader';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { CountrySelect } from 'myEntities/Country';
-import { CurrencySelect } from 'myEntities/Currency';
+import { CountrySelect } from 'entities/Country';
+import { CurrencySelect } from 'entities/Currency';
 import { type Profile } from '../../model/types/profile';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
-import { type Country } from 'myEntities/Country/model/types/country';
-import { type Currency } from 'myEntities/Currency/model/types/currency';
+import { type Country } from 'entities/Country/model/types/country';
+import { type Currency } from 'entities/Currency/model/types/currency';
 import { classNames, type Mods } from 'shared/lib/classNames/classNames';
 
 interface ProfileCardProps {

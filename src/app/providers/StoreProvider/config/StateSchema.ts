@@ -1,11 +1,11 @@
-import { type CounterSchema } from 'myEntities/Counter';
-import { type UserSchema } from 'myEntities/User';
+import { type CounterSchema } from 'entities/Counter';
+import { type UserSchema } from 'entities/User';
 import { type LoginSchema } from 'features/AuthByUsername';
 import {
   type AnyAction, type EnhancedStore, type Reducer, type ReducersMapObject
 } from '@reduxjs/toolkit';
 import { type CombinedState } from 'redux';
-import { type ProfileSchema } from 'myEntities/Profile';
+import { type ProfileSchema } from 'entities/Profile';
 import { type AxiosInstance } from 'axios';
 import { type NavigateOptions } from 'react-router';
 import { To } from 'react-router-dom';

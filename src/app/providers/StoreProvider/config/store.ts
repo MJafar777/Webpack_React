@@ -1,8 +1,8 @@
 import { $api } from 'shared/api/api';
 import { To } from 'react-router-dom';
-import { userReducer } from 'myEntities/User';
+import { userReducer } from 'entities/User';
 import { type NavigateOptions } from 'react-router';
-import { counterReducer } from 'myEntities/Counter';
+import { counterReducer } from 'entities/Counter';
 import {createReducerManager} from './ReducerManager'
 import { type CombinedState, type Reducer } from 'redux';
 import { type StateSchema, type ThunkExtraArg } from './StateSchema';

@@ -2,9 +2,9 @@ import React from 'react';
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
 
 import { ProfileCard } from './ProfileCard';
-import { Country } from 'myEntities/Country';
+import { Country } from 'entities/Country';
 import Avatar from 'shared/assets/test/storybook.jpg';
-import { Currency } from 'myEntities/Currency';
+import { Currency } from 'entities/Currency';
 export default {
   title: 'entities/ProfileCard',
   component: ProfileCard,

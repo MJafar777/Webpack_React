@@ -13,16 +13,16 @@
     getProfileReadonly,
     getProfileIsLoading,
     getProfileValidateError
-  } from 'myEntities/Profile';
+  } from 'entities/Profile';
 
   import { useSelector } from 'react-redux';
-  import { type Country } from 'myEntities/Country';
-  import { type Currency } from 'myEntities/Currency';
+  import { type Country } from 'entities/Country';
+  import { type Currency } from 'entities/Currency';
   import { Text, TextTheme } from 'shared/ui/Text/Text';
   import React, { useCallback, useEffect } from 'react';
   import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
-  import { ValidateProfileError } from 'myEntities/Profile/model/types/profile';
+  import { ValidateProfileError } from 'entities/Profile/model/types/profile';
   import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
   const reducers: ReducersList = {
     profile: profileReducer
@@ -46,10 +46,13 @@
 
     const validateErrorTranslationList = {
       [ValidateProfileError.INCORRECT_AGE]:
-        "Yosh haqidagi ma'lumot notogri kiritildi",
+        "Yoshinsizni noto'gri kiritdingiz",
       [ValidateProfileError.INCORRECT_USER_DATA]:
-        "User ma'lumotlarini kiritishda xatolikka yo'l qo'yildi",
-      [ValidateProfileError.INCORRECT_COUNTRY]: 'davlat tanlanmadi'
+        "User ma'lumotlari xato",
+      [ValidateProfileError.INCORRECT_COUNTRY]:
+       'Davlatni tanlang',
+      [ValidateProfileError.INCORRECT_SERVER]:
+      "serverda qandaydir xatolik bor, qayta urinib ko'ring"
     };
     const getSelectorProfileErrors = useSelector(getProfileValidateError);
 

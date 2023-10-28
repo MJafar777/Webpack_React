@@ -1,5 +1,5 @@
-import { type Currency } from 'myEntities/Currency/model/types/currency';
-import { type Country } from 'myEntities/Country/model/types/country';
+import { type Currency } from 'entities/Currency/model/types/currency';
+import { type Country } from 'entities/Country/model/types/country';
 
 export enum ValidateProfileError {
   INCORRECT_AGE = 'INCORRECT_AGE',

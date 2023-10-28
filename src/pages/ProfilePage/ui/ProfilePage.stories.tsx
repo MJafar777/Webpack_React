@@ -1,6 +1,6 @@
 import React from 'react';
-import { Country } from 'myEntities/Country';
-import { Currency } from 'myEntities/Currency';
+import { Country } from 'entities/Country';
+import { Currency } from 'entities/Currency';
 import { Theme } from 'app/providers/ThemeProvider';
 import ProfilePage from 'pages/ProfilePage/ui/ProfilePage';
 // import Avatar from '../../../shared/assets/test/storybook.jpg'

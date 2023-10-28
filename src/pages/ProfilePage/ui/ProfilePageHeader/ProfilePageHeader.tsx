@@ -10,7 +10,7 @@ import {
   getProfileReadonly,
   profileActions,
   updateProfileData,
-} from "myEntities/Profile";
+} from "entities/Profile";
 
 interface ProfilePageHeaderProps {
   className?: string;

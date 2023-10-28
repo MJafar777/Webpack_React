@@ -1,6 +1,6 @@
 import React from 'react';
 import { type Story } from '@storybook/react';
-import { profileReducer } from 'myEntities/Profile';
+import { profileReducer } from 'entities/Profile';
 import { type StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlices';
 
