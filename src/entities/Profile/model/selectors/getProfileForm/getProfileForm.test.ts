@@ -4,11 +4,11 @@ import { getProfileForm } from './getProfileForm';
 describe('getProfileForm.test', () => {
   test('should return value', () => {
     const data = {
-      username: 'Behzod',
-      lastname: 'hamroyev',
-      age: 23,
-      city: 'firs',
-      first: 'sklsd'
+      username: 'Jafar',
+        lastname: 'Mirzaraximov',
+        age: 23,
+        city: 'Tashkent',
+        first: 'vjvjvjvj'
     };
     const state: DeepPartial<StateSchema> = {
       profile: {
