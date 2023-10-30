@@ -17,13 +17,15 @@
       "id": "1",
       "username": "admin",
       "password": "admin",
-      "role": "Admin"
+      "role": "Admin",
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "user",
-      "role": "user"
+      "role": "user",
+      "avatar": "https://e7.pngegg.com/pngimages/168/827/png-clipart-computer-icons-user-profile-avatar-profile-woman-desktop-wallpaper-thumbnail.png"
     }
   ],
 
