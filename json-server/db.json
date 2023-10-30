@@ -11,20 +11,114 @@
       "userId": "2"
     }
   ],
-  "comments": [
-    {
-      "id": "1",
-      "body": "some comment",
-      "postId": "1"
-    }
-  ],
+
   "users": [
     {
       "id": "1",
-      "username": "MJafar777",
-      "password": "Jmgjmg2001@#"
+      "username": "admin",
+      "password": "admin",
+      "role": "Admin"
+    },
+    {
+      "id": "2",
+      "username": "user",
+      "password": "user",
+      "role": "user"
     }
   ],
+
+  "articles": [
+    {
+      "id": "1",
+      "title": "Javascript news",
+      "subtitle": "What's new in JS for 2022?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "26.02.2022",
+      "type": ["IT"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Title of this block",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta odio autem cumque atque iste esse dolore quibusdam nam unde? Exercitationem?",
+            "JavaScript — Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptatem aspernatur maiores. Tempore eveniet quo aliquid. Est molestiae corrupti minus."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptatem aspernatur maiores. Tempore eveniet quo aliquid. Est molestiae corrupti minus.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptatem aspernatur maiores. Tempore eveniet quo aliquid. Est molestiae corrupti minus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptatem aspernatur maiores. Tempore eveniet quo aliquid. Est molestiae corrupti minus."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
+          "title": "Рисунок 1 - скриншот сайта"
+        },
+        {
+          "id": "3",
+          "type": "CODE",
+          "code": "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);"
+        },
+        {
+          "id": "7",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta odio autem cumque atque iste esse dolore quibusdam nam unde? Exercitationem?",
+            "JavaScript — Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptatem aspernatur maiores. Tempore eveniet quo aliquid. Est molestiae corrupti minus."
+          ]
+        },
+        {
+          "id": "8",
+          "type": "IMAGE",
+          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
+          "title": "Рисунок 1 - скриншот сайта"
+        },
+        {
+          "id": "9",
+          "type": "TEXT",
+          "title": "Заголовок этого блока",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta odio autem cumque atque iste esse dolore quibusdam nam unde? Exercitationem?"
+          ]
+        }
+      ]
+    }
+  ],
+
+  "comments": [
+    {
+      "id": "1",
+      "text": "some comment",
+      "articleId": "1",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "text": "some comment 2",
+      "articleId": "1",
+      "userId": "1"
+    },
+    {
+      "id": "3",
+      "text": "some comment 3",
+      "articleId": "1",
+      "userId": "1"
+    }
+  ],
+
   "profile": {
     "first": "Jafar",
     "lastname": "MJafar777",

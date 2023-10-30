@@ -4,7 +4,7 @@ import { BuildOptions } from './types/config';
 import { buildBabelLoader } from './loaders/buildBabelLoader';
 
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
-const {isDev} = options;
+    const { isDev } = options;
 
     const svgLoader = {
         test: /\.svg$/,
@@ -15,6 +15,7 @@ const {isDev} = options;
 
     const cssLoader = buildCssLoader(isDev);
 
+    // Если не используем тайпскрипт - нужен babel-loader
     const typescriptLoader = {
         test: /\.tsx?$/,
         use: 'ts-loader',

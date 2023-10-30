@@ -1,21 +1,27 @@
-import { type Profile, ValidateProfileError } from '../../types/profile';
+import { Profile, ValidateProfileError } from '../../types/profile';
 
 export const validateProfileData = (profile?: Profile) => {
-  const errors: ValidateProfileError[] = [];
-  if (!profile) {
-    return [ValidateProfileError.NO_PROFILE_DATA];
-  }
-  if (!profile?.first || !profile?.lastname) {
-    errors.push(ValidateProfileError.INCORRECT_USER_DATA);
-  }
+    if (!profile) {
+        return [ValidateProfileError.NO_DATA];
+    }
 
-  if ((profile?.country) == null) {
-    errors.push(ValidateProfileError.INCORRECT_COUNTRY);
-  }
+    const {
+        first, lastname, age, country,
+    } = profile;
 
-  if (!profile?.age || !Number.isInteger(profile?.age)) {
-    errors.push(ValidateProfileError.INCORRECT_AGE);
-  }
+    const errors: ValidateProfileError[] = [];
 
-  return errors;
+    if (!first || !lastname) {
+        errors.push(ValidateProfileError.INCORRECT_USER_DATA);
+    }
+
+    if (!age || !Number.isInteger(age)) {
+        errors.push(ValidateProfileError.INCORRECT_AGE);
+    }
+
+    if (!country) {
+        errors.push(ValidateProfileError.INCORRECT_COUNTRY);
+    }
+
+    return errors;
 };
