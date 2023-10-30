@@ -11,7 +11,6 @@
       "userId": "2"
     }
   ],
-
   "users": [
     {
       "id": "1",
@@ -28,7 +27,6 @@
       "avatar": "https://e7.pngegg.com/pngimages/168/827/png-clipart-computer-icons-user-profile-avatar-profile-woman-desktop-wallpaper-thumbnail.png"
     }
   ],
-
   "articles": [
     {
       "id": "1",
@@ -37,7 +35,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -99,7 +99,6 @@
       ]
     }
   ],
-
   "comments": [
     {
       "id": "1",
@@ -118,17 +117,42 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "hello",
+      "id": "Oh-kdAx"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "vjvjvjvjv",
+      "id": "ZEa0otc"
     }
   ],
-
-  "profile": {
-    "first": "Jafar",
-    "lastname": "MJafar777",
-    "age": 24,
-    "currency": "USD",
-    "country": "Armenia",
-    "city": "Moscow",
-    "username": "admin",
-    "avatar": "https://avatars.githubusercontent.com/u/94430558?v=4"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Jafar",
+      "lastname": "MJafar777",
+      "age": 24,
+      "currency": "USD",
+      "country": "Armenia",
+      "city": "Moscow",
+      "username": "admin",
+      "avatar": "https://avatars.githubusercontent.com/u/94430558?v=4"
+    },
+    {
+      "id": "2",
+      "first": "user",
+      "lastname": "user",
+      "age": 22,
+      "currency": "UZS",
+      "country": "Uzbek Republic",
+      "city": "Tashkent",
+      "username": "admin2",
+      "avatar": "https://avatars.githubusercontent.com/u/9543?v=4"
+    }
+  ]
 }
