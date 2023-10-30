@@ -29,6 +29,5 @@ export const addCommentFormSlice = createSlice({
     // },
 });
 
-// Action creators are generated for each case reducer function
 export const { actions: addCommentFormActions } = addCommentFormSlice;
 export const { reducer: addCommentFormReducer } = addCommentFormSlice;
