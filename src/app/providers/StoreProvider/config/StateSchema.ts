@@ -18,6 +18,7 @@ export interface StateSchema {
     counter: CounterSchema;
     user: UserSchema;
 
+    // Асинхронные редюсеры
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
     articleDetails?: ArticleDetailsSchema;
