@@ -1,12 +1,10 @@
 import React from 'react';
-import { Article } from 'entities/Article';
-import ArticleDetailsPage from './ArticleDetailsPage';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-
+import { Article } from 'entities/Article';
 import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-
+import ArticleDetailsPage from './ArticleDetailsPage';
 
 export default {
     title: 'pages/ArticleDetailsPage',
@@ -21,14 +19,14 @@ const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => <ArticleDe
 const article: Article = {
     id: '1',
     title: 'Javascript news',
-    subtitle: 'Что нового в JS за 2023 год?',
+    subtitle: 'Что нового в JS за 2022 год?',
     img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
     views: 1022,
     createdAt: '26.02.2022',
     type: [ArticleType.IT],
     user: {
         id: '1',
-        username: 'Jafar',
+        username: 'Ulbi tv',
     },
     blocks: [
         {
