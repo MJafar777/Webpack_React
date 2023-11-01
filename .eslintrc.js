@@ -6,9 +6,10 @@ module.exports = {
   },
   extends: [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
-    "plugin:storybook/recommended"
+    "plugin:storybook/recommended",
+    "plugin:@typescript-eslint/recommended",
+    
   ],
   overrides: [
     {
@@ -26,7 +27,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "@typescript-eslint" ,"i18next"],
+  plugins: ["react", "@typescript-eslint", "i18next"],
   settings: {
     react: {
       version: "detect",
@@ -48,25 +49,24 @@ module.exports = {
     "react/function-component-definition": "off",
     "no-shadow": "off",
     "no-underscore-dangle": "off",
-    'i18next/no-literal-string':[
-      'error' ,
+    "i18next/no-literal-string": [
+      "error",
       {
-        markupOnly: true ,
-        ignoreAttribute:['data-testId', 'to']
+        markupOnly: true,
+        ignoreAttribute: ["data-testId", "to", "target"],
       },
-       ],
+    ],
   },
-  'max-len': ['error', { ignoreComments: true, code: 100 }],
+  "max-len": ["error", { ignoreComments: true, code: 125 }],
   // global :{
   //   '__IS_DEV__': true
   // }
-  overides :[
+  overides: [
     {
-      files:['**/src/**/*.test.{ts,tsx}'],
-      rules:
-      {
-        'i18next/no-literal-string':'off',
-      }
-    }
-  ]
+      files: ["**/src/**/*.test.{ts,tsx}"],
+      rules: {
+        "i18next/no-literal-string": "off",
+      },
+    },
+  ],
 };
