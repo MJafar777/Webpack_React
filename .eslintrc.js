@@ -9,7 +9,6 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:storybook/recommended",
     "plugin:@typescript-eslint/recommended",
-    
   ],
   overrides: [
     {
@@ -53,7 +52,15 @@ module.exports = {
       "error",
       {
         markupOnly: true,
-        ignoreAttribute: ["data-testId", "to", "target"],
+        ignoreAttribute: [
+          "data-testId",
+          "to",
+          "target",
+          "justify",
+          "align",
+          "direction",
+          "gap",
+         ],
       },
     ],
   },

@@ -22,7 +22,9 @@ import { UISchema } from 'features/UI';
 export interface StateSchema {
     counter: CounterSchema;
     user: UserSchema;
-    ui: UISchema;  
+    ui: UISchema;
+
+    // Асинхронные редюсеры
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
     articleDetails?: ArticleDetailsSchema;
@@ -39,7 +41,7 @@ export interface ReducerManager {
     reduce: (state: StateSchema, action: AnyAction) => CombinedState<StateSchema>;
     add: (key: StateSchemaKey, reducer: Reducer) => void;
     remove: (key: StateSchemaKey) => void;
-    
+    // true - вмонтирован, false - демонтирован
     getMountedReducers: () => MountedReducers;
 }
 
