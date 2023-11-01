@@ -53,6 +53,7 @@ module.exports = {
       {
         markupOnly: true,
         ignoreAttribute: [
+          "role",
           "data-testId",
           "to",
           "target",
@@ -60,7 +61,7 @@ module.exports = {
           "align",
           "direction",
           "gap",
-         ],
+        ],
       },
     ],
   },
