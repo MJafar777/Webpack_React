@@ -17,7 +17,6 @@ interface NavbarProps {
 }
 
 export const Navbar = memo(({ className }: NavbarProps) => {
-    const img = "https://avatars.githubusercontent.com/u/94430558?v=4";
     const { t } = useTranslation();
     const [isAuthModal, setIsAuthModal] = useState(false);
     const authData = useSelector(getUserAuthData);
@@ -40,7 +39,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
             <header className={classNames(cls.Navbar, {}, [className])}>
                 <Text
                     className={cls.appName}
-                    title={t('Jafar App')}
+                    title={t('Ulbi TV App')}
                     theme={TextTheme.INVERTED}
                 />
                 <AppLink
@@ -63,8 +62,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                             onClick: onLogout,
                         },
                     ]}
-                    trigger={<Avatar size={30} src={img} />}
-                    // authData.avatar
+                    trigger={<Avatar size={30} src={authData.avatar} />}
                 />
             </header>
         );
