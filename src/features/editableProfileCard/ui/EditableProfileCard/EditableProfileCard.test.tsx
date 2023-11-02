@@ -1,12 +1,12 @@
-import { $api } from 'shared/api/api';
-import { Country } from 'entities/Country';
+import { fireEvent, screen } from '@testing-library/react';
+import { componentRender } from 'shared/lib/tests/componentRender/componentRender';
 import { Profile } from 'entities/Profile';
 import { Currency } from 'entities/Currency';
+import { Country } from 'entities/Country';
 import userEvent from '@testing-library/user-event';
-import { fireEvent, screen } from '@testing-library/react';
+import { $api } from 'shared/api/api';
+import { profileReducer } from '../../model/slice/profileSlice';
 import { EditableProfileCard } from './EditableProfileCard';
-import { componentRender } from 'shared/lib/tests/componentRender/componentRender';
-import { profileReducer } from 'features/editableProfileCard/model/slice/profileSlice';
 
 const profile: Profile = {
     id: '1',
@@ -36,7 +36,6 @@ const options = {
 };
 
 describe('features/EditableProfileCard', () => {
-    
     test('Режим рид онли должен переключиться', async () => {
         componentRender(<EditableProfileCard id="1" />, options);
         await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditButton'));
