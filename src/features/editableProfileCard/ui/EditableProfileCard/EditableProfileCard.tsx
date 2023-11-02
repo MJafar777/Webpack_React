@@ -1,9 +1,10 @@
-import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Currency } from 'entities/Currency';
+import { useTranslation } from 'react-i18next';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Country } from 'entities/Country';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { ProfileCard } from 'entities/Profile';
@@ -15,13 +16,9 @@ import { getProfileError } from '../../model/selectors/getProfileError/getProfil
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
 import { getProfileValidateErrors } from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors';
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData';
-import { classNames  } from 'shared/lib/classNames/classNames';
 import { profileActions, profileReducer } from '../../model/slice/profileSlice';
 import { ValidateProfileError } from '../../model/types/editableProfileCardSchema';
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader';
-
-
-
 
 interface EditableProfileCardProps {
     className?: string;
@@ -94,7 +91,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
             <VStack
                 gap="8"
                 max
-                className={classNames('' , {}, [className])}
+                className={classNames('', {}, [className])}
             >
                 <EditableProfileCardHeader />
                 {validateErrors?.length && validateErrors.map((err) => (
@@ -102,6 +99,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
                         key={err}
                         theme={TextTheme.ERROR}
                         text={validateErrorTranslates[err]}
+                        data-testid="EditableProfileCard.Error"
                     />
                 ))}
                 <ProfileCard
