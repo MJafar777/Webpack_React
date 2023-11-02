@@ -35,6 +35,5 @@ export const loginSlice = createSlice({
     },
 });
 
-// Action creators are generated for each case reducer function
 export const { actions: loginActions } = loginSlice;
 export const { reducer: loginReducer } = loginSlice;

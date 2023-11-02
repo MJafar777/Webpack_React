@@ -39,7 +39,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
             <header className={classNames(cls.Navbar, {}, [className])}>
                 <Text
                     className={cls.appName}
-                    title={t('Ulbi TV App')}
+                    title={t('Jafar App')}
                     theme={TextTheme.INVERTED}
                 />
                 <AppLink
@@ -62,7 +62,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                             onClick: onLogout,
                         },
                     ]}
-                    trigger={<Avatar size={30} src={authData.avatar} />}
+                    trigger={<Avatar size={30} src={"https://avatars.githubusercontent.com/u/94430558?v=4"} />}
                 />
             </header>
         );
