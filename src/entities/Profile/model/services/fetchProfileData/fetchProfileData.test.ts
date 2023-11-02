@@ -6,11 +6,11 @@ import { fetchProfileData } from './fetchProfileData';
 
 const data = {
     username: 'admin',
-    age: 22,
+    age: 23,
     country: Country.Ukraine,
-    lastname: 'ulbi tv',
-    first: 'asd',
-    city: 'asf',
+    lastname: 'Jafar',
+    first: 'avjvjsd',
+    city: 'vjv',
     currency: Currency.USD,
 };
 

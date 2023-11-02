@@ -7,11 +7,11 @@ describe('getProfileForm.test', () => {
     test('should return error', () => {
         const data = {
             username: 'admin',
-            age: 22,
+            age: 23,
             country: Country.Ukraine,
-            lastname: 'ulbi tv',
-            first: 'asd',
-            city: 'asf',
+            lastname: 'Jafar',
+            first: 'vjvjv',
+            city: 'Tashkent',
             currency: Currency.USD,
         };
         const state: DeepPartial<StateSchema> = {
