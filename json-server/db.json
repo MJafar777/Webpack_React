@@ -1,4 +1,38 @@
 {
+  "notifications": [
+    {
+      "id": "1",
+      "title": "notification 1",
+      "description": "yangi xabar keldi !",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "title": "notification 2",
+      "description": "yangi xabar keldi !",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "3",
+      "title": "notification 3",
+      "description": "yangi xabar keldi !",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "4",
+      "title": "notification 4",
+      "description": "yangi xabar keldi !",
+      "userId": "1"
+    },
+    {
+      "id": "5",
+      "title": "notification 5",
+      "description": "yangi xabar keldi !",
+      "userId": "2"
+    }
+  ],
   "posts": [
     {
       "id": "1",

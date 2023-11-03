@@ -30,8 +30,8 @@ topLeft.args = {
     direction: 'top left',
     value: '123',
     items: [
-        { content: 'cdjncid', value: '123' },
-        { content: 'kdmkverjn', value: '1232' },
+        { content: '1asfasfasf23', value: '123' },
+        { content: '1asfasfasf21233', value: '1232' },
     ],
 };
 
@@ -40,8 +40,8 @@ topRight.args = {
     direction: 'top right',
     value: '123',
     items: [
-        { content: 'ladk alsd ', value: '123' },
-        { content: 'kdjcj sdkc', value: '1232' },
+        { content: '1asfasfasf23', value: '123' },
+        { content: '1asfasfasf21233', value: '1232' },
     ],
 };
 
@@ -50,8 +50,8 @@ bottomLeft.args = {
     direction: 'bottom left',
     value: '123',
     items: [
-        { content: 'kdjvnesow', value: '123' },
-        { content: 'dkjc hqehc ', value: '1232' },
+        { content: '1asfasfasf23', value: '123' },
+        { content: '1asfasfasf21233', value: '1232' },
     ],
 };
 
@@ -60,7 +60,7 @@ bottomRight.args = {
     direction: 'bottom right',
     value: '123',
     items: [
-        { content: 'dsjckj wse', value: '123' },
-        { content: 'jsn dkjdhjbeuk', value: '1232' },
+        { content: '1asfasfasf23', value: '123' },
+        { content: '1asfasfasf21233', value: '1232' },
     ],
 };

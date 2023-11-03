@@ -72,7 +72,7 @@ export function ListBox(props: ListBoxProps) {
                                         },
                                     )}
                                 >
-                                    {selected && ''}
+                                    {selected && '!!!'}
                                     {item.content}
                                 </li>
                             )}

@@ -39,7 +39,6 @@ export const RoutePath: Record<AppRoutes, string> = {
     [AppRoutes.ARTICLE_EDIT]: '/articles/:id/edit',
     [AppRoutes.ADMIN_PANEL]: '/admin',
     [AppRoutes.FORBIDDEN]: '/forbidden',
-    // последний
     [AppRoutes.NOT_FOUND]: '*',
 };
 
@@ -87,7 +86,6 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
         path: `${RoutePath.forbidden}`,
         element: <ForbiddenPage />,
     },
-    // last
     [AppRoutes.NOT_FOUND]: {
         path: RoutePath.not_found,
         element: <NotFoundPage />,

@@ -14,7 +14,7 @@ i18n
         debug: false,
 
         interpolation: {
-            escapeValue: false, // not needed for react as it escapes by default
+            escapeValue: false, 
         },
 
         backend: {
