@@ -1,9 +1,13 @@
 {
   " App": " App",
+  "A": "A",
+  "Admin": "Admin",
+  "App": "App",
   "J App": "J App",
   "Ja App": "Ja App",
   "Jaf App": "Jaf App",
   "Jafar App": "Jafar App",
+  "JafarApp": "JafarApp",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     " Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam": {
       "": ""
@@ -13,8 +17,14 @@
   "U App": "U App",
   "Ulbi  App": "Ulbi  App",
   "Ulbi TV App": "Ulbi TV App",
+  "afar App": "afar App",
   "decrement": "decrement",
   "increment": "increment",
+  "ja App": "ja App",
+  "jaa App": "jaa App",
+  "jaaf App": "jaaf App",
+  "jafa App": "jafa App",
+  "jafar App": "jafar App",
   "throw error": "throw error",
   "Админ панель": "Админ панель",
   "Админка": "",
