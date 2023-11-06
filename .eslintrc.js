@@ -13,7 +13,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'ulbi-tv-plugin', 'unused-imports'],
+  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'unused-imports', 'ulbi-tv-plugin'],
   rules: {
     'react/jsx-no-undef': 'off',
     'react/jsx-indent': ['error', 4],
