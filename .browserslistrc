@@ -1,3 +1,10 @@
-# Browsers that we support
+[production]
+
 defaults
 not IE 11
+
+[development]
+
+Last 2 Chrome versions
+Last 2 Firefox versions
+Last 1 Safari versions
