@@ -7,8 +7,11 @@ project.addSourceFilesAtPaths('src/**/*.ts');
 project.addSourceFilesAtPaths('src/**/*.tsx');
 
 const files = project.getSourceFiles();
+
 const uiPath = path.resolve(__dirname, '..', '..', 'src', 'shared', 'ui');
+
 const sharedUiDirectory = project.getDirectory(uiPath);
+
 const componentsDirs = sharedUiDirectory?.getDirectories();
 
 function isAbsolute(value: string) {
