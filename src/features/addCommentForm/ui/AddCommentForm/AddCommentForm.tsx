@@ -17,43 +17,43 @@ export interface AddCommentFormProps {
 }
 
 const reducers: ReducersList = {
-    addCommentForm: addCommentFormReducer,
+  addCommentForm: addCommentFormReducer,
 };
 
 const AddCommentForm = memo((props: AddCommentFormProps) => {
-    const { className, onSendComment } = props;
-    const { t } = useTranslation();
-    const text = useSelector(getAddCommentFormText);
-    const error = useSelector(getAddCommentFormError);
-    const dispatch = useAppDispatch();
+  const { className, onSendComment } = props;
+  const { t } = useTranslation();
+  const text = useSelector(getAddCommentFormText);
+  const error = useSelector(getAddCommentFormError);
+  const dispatch = useAppDispatch();
 
-    const onCommentTextChange = useCallback((value: string) => {
-        dispatch(addCommentFormActions.setText(value));
-    }, [dispatch]);
+  const onCommentTextChange = useCallback((value: string) => {
+    dispatch(addCommentFormActions.setText(value));
+  }, [dispatch]);
 
-    const onSendHandler = useCallback(() => {
-        onSendComment(text || '');
-        onCommentTextChange('');
-    }, [onCommentTextChange, onSendComment, text]);
+  const onSendHandler = useCallback(() => {
+    onSendComment(text || '');
+    onCommentTextChange('');
+  }, [onCommentTextChange, onSendComment, text]);
 
-    return (
-        <DynamicModuleLoader reducers={reducers}>
-            <HStack justify="between" max className={classNames(cls.AddCommentForm, {}, [className])}>
-                <Input
+  return (
+      <DynamicModuleLoader reducers={reducers}>
+          <HStack justify="between" max className={classNames(cls.AddCommentForm, {}, [className])}>
+              <Input
                     className={cls.input}
                     placeholder={t('Введите текст комментария')}
                     value={text}
                     onChange={onCommentTextChange}
                 />
-                <Button
+              <Button
                     theme={ButtonTheme.OUTLINE}
                     onClick={onSendHandler}
                 >
-                    {t('Отправить')}
-                </Button>
-            </HStack>
-        </DynamicModuleLoader>
-    );
+                  {t('Отправить')}
+              </Button>
+          </HStack>
+      </DynamicModuleLoader>
+  );
 });
 
 export default AddCommentForm;

@@ -9,7 +9,7 @@ import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitial
 import { VStack } from '@/shared/ui/Stack';
 import { Loader } from '@/shared/ui/Loader/Loader';
 import {
-    fetchCommentsByArticleId,
+  fetchCommentsByArticleId,
 } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { getArticleComments } from '../../model/slices/articleDetailsCommentsSlice';
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
@@ -21,33 +21,33 @@ interface ArticleDetailsCommentsProps {
 }
 
 export const ArticleDetailsComments = memo((props: ArticleDetailsCommentsProps) => {
-    const { className, id } = props;
-    const { t } = useTranslation();
-    const comments = useSelector(getArticleComments.selectAll);
-    const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
-    const dispatch = useDispatch();
+  const { className, id } = props;
+  const { t } = useTranslation();
+  const comments = useSelector(getArticleComments.selectAll);
+  const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
+  const dispatch = useDispatch();
 
-    const onSendComment = useCallback((text: string) => {
-        dispatch(addCommentForArticle(text));
-    }, [dispatch]);
+  const onSendComment = useCallback((text: string) => {
+    dispatch(addCommentForArticle(text));
+  }, [dispatch]);
 
-    useInitialEffect(() => {
-        dispatch(fetchCommentsByArticleId(id));
-    });
+  useInitialEffect(() => {
+    dispatch(fetchCommentsByArticleId(id));
+  });
 
-    return (
-        <VStack gap="16" max className={classNames('', {}, [className])}>
-            <Text
+  return (
+      <VStack gap="16" max className={classNames('', {}, [className])}>
+          <Text
                 size={TextSize.L}
                 title={t('Комментарии')}
             />
-            <Suspense fallback={<Loader />}>
-                <AddCommentForm onSendComment={onSendComment} />
-            </Suspense>
-            <CommentList
+          <Suspense fallback={<Loader />}>
+              <AddCommentForm onSendComment={onSendComment} />
+          </Suspense>
+          <CommentList
                 isLoading={commentsIsLoading}
                 comments={comments}
             />
-        </VStack>
-    );
+      </VStack>
+  );
 });

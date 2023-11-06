@@ -13,22 +13,22 @@ interface CurrencySelectProps {
 }
 
 const options = [
-    { value: Currency.RUB, content: Currency.RUB },
-    { value: Currency.EUR, content: Currency.EUR },
-    { value: Currency.USD, content: Currency.USD },
+  { value: Currency.RUB, content: Currency.RUB },
+  { value: Currency.EUR, content: Currency.EUR },
+  { value: Currency.USD, content: Currency.USD },
 ];
 
 export const CurrencySelect = memo(({
-    className, value, onChange, readonly,
+  className, value, onChange, readonly,
 }: CurrencySelectProps) => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
-    const onChangeHandler = useCallback((value: string) => {
-        onChange?.(value as Currency);
-    }, [onChange]);
+  const onChangeHandler = useCallback((value: string) => {
+    onChange?.(value as Currency);
+  }, [onChange]);
 
-    return (
-        <ListBox
+  return (
+      <ListBox
             className={className}
             value={value}
             defaultValue={t('Укажите валюту')}
@@ -38,5 +38,5 @@ export const CurrencySelect = memo(({
             readonly={readonly}
             direction="top right"
         />
-    );
+  );
 });

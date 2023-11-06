@@ -1,3 +1,3 @@
 export {
-    ArticleEditPageAsync as ArticleEditPage,
+  ArticleEditPageAsync as ArticleEditPage,
 } from './ui/ArticleEditPage/ArticleEditPage.async';

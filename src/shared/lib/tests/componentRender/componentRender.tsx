@@ -13,19 +13,19 @@ export interface componentRenderOptions {
 }
 
 export function componentRender(component: ReactNode, options: componentRenderOptions = {}) {
-    const {
-        route = '/',
-        initialState,
-        asyncReducers,
-    } = options;
+  const {
+    route = '/',
+    initialState,
+    asyncReducers,
+  } = options;
 
-    return render(
-        <MemoryRouter initialEntries={[route]}>
-            <StoreProvider asyncReducers={asyncReducers} initialState={initialState}>
-                <I18nextProvider i18n={i18nForTests}>
-                    {component}
-                </I18nextProvider>
-            </StoreProvider>
-        </MemoryRouter>,
-    );
+  return render(
+      <MemoryRouter initialEntries={[route]}>
+          <StoreProvider asyncReducers={asyncReducers} initialState={initialState}>
+              <I18nextProvider i18n={i18nForTests}>
+                  {component}
+              </I18nextProvider>
+          </StoreProvider>
+      </MemoryRouter>,
+  );
 }
