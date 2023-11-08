@@ -139,7 +139,7 @@
     "react-router-dom": "^6.17.0",
     "react-spring": "^9.7.3",
     "react-virtualized": "^9.22.5",
-    "storybook": "^7.5.2",
+    "storybook": "^7.5.3",
     "stylelint-config-standard-scss": "^11.0.0"
   },
   "loki": {
