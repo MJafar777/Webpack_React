@@ -14,7 +14,7 @@ import { articlesPageReducer } from '../../model/slices/articlesPageSlice';
 import cls from './ArticlesPage.module.scss';
 
 interface ArticlesPageProps {
-    className?: string;
+  className?: string;
 }
 
 const reducers: ReducersList = {
@@ -23,7 +23,7 @@ const reducers: ReducersList = {
 
 const ArticlesPage = (props: ArticlesPageProps) => {
   const { className } = props;
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const dispatch = useAppDispatch();
   const [searchParams] = useSearchParams();
 
@@ -38,9 +38,10 @@ const ArticlesPage = (props: ArticlesPageProps) => {
   return (
       <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
           <Page
-                onScrollEnd={onLoadNextPart}
-                className={classNames(cls.ArticlesPage, {}, [className])}
-            >
+        data-testid="ArticlesPage"
+        onScrollEnd={onLoadNextPart}
+        className={classNames(cls.ArticlesPage, {}, [className])}
+      >
               <ArticlesPageFilters />
               <ArticleInfiniteList className={cls.list} />
           </Page>
