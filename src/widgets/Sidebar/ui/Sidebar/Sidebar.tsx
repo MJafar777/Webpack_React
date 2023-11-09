@@ -21,7 +21,6 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
     const sidebarItemsList = useSidebarItems();
 
     const onToggle = () => {
-        console.log(collapsed);
         setCollapsed((prev) => !prev);
     };
 
@@ -88,6 +87,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                     >
                         {collapsed ? '>' : '<'}
                     </Button>
+                    
                     <VStack role="navigation" gap="8" className={cls.items}>
                         {itemsList}
                     </VStack>
