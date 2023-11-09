@@ -11,7 +11,7 @@ import {
     StateSchemaKey,
 } from './StateSchema';
 
-export function createReducerManager(
+export default function createReducerManager(
     initialReducers: ReducersMapObject<StateSchema>,
 ): ReducerManager {
     const reducers = { ...initialReducers };
