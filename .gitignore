@@ -1,8 +1,7 @@
-.idea
 /build
 node_modules
+.idea
 /storybook-static
 .loki/report.html
 .loki/report.json
-/reports
-# apiUrl=https://webpack-asoslari-backend.vercel.app
+/reports/unit

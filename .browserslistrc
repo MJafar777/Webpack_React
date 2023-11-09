@@ -1,10 +1,9 @@
 [production]
-
 defaults
 not IE 11
 
-[development]
 
-Last 2 Chrome versions
-Last 2 Firefox versions
-Last 1 Safari versions
+[development]
+last 2 Chrome versions
+last 2 Firefox versions
+last 1 Safari version
