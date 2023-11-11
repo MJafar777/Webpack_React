@@ -7,6 +7,8 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 
 ----
 
+## apiUrl=https://webpack-server.vercel.app/
+
 ## Скрипты
 
 - `npm run start` - Запуск frontend проекта на webpack dev server

@@ -19,9 +19,15 @@ export interface ArticleImageBlock extends ArticleBlockBase {
 
 export interface ArticleTextBlock extends ArticleBlockBase {
     type: ArticleBlockType.TEXT;
-    paragraphs: string[];
+    // eslint-disable-next-line no-use-before-define
+    paragraphs: ArticleTextBlockParagraphs[];
     title?: string;
 }
+
+export type ArticleTextBlockParagraphs = {
+    img1: string;
+    paragraphs1: string;
+};
 
 export type ArticleBlock =
     | ArticleCodeBlock

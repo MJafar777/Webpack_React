@@ -6,6 +6,8 @@ import { Text } from '@/shared/ui/redesigned/Text';
 import cls from './ArticleTextBlockComponent.module.scss';
 import { ArticleTextBlock } from '../../model/types/article';
 import { ToggleFeatures } from '@/shared/lib/features';
+import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
+import { AppImage } from '@/shared/ui/redesigned/AppImage';
 
 interface ArticleTextBlockComponentProps {
     className?: string;
@@ -39,16 +41,26 @@ export const ArticleTextBlockComponent = memo(
                     <ToggleFeatures
                         feature="isAppRedesigned"
                         on={
-                            <Text
-                                key={paragraph}
-                                text={paragraph}
-                                className={cls.paragraph}
-                            />
+                            <>
+                                <AppImage
+                                    fallback={
+                                        <Skeleton width="100%" height={250} />
+                                    }
+                                    src={paragraph.img1}
+                                    className={cls.img}
+                                    alt={paragraph.paragraphs1}
+                                />
+                                <Text
+                                    key={paragraph.paragraphs1}
+                                    text={paragraph.paragraphs1}
+                                    className={cls.paragraph}
+                                />
+                            </>
                         }
                         off={
                             <TextDeprecated
-                                key={paragraph}
-                                text={paragraph}
+                                key={paragraph.paragraphs1}
+                                text={paragraph.paragraphs1}
                                 className={cls.paragraph}
                             />
                         }

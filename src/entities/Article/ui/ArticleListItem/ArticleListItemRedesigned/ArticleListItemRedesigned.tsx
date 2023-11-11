@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
@@ -22,6 +23,7 @@ import {
 
 export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
     const { className, article, view, target } = props;
+
     const { t } = useTranslation();
 
     const userInfo = (
@@ -72,9 +74,13 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
                     {textBlock?.paragraphs && (
                         <Text
                             className={cls.textBlock}
-                            text={textBlock.paragraphs.slice(0, 2).join(' ')}
+                            text={textBlock.paragraphs
+                                .map((e) => e.paragraphs1)
+                                .slice(0, 2)
+                                .join(' ')}
                         />
                     )}
+                     
                     <HStack max justify="between">
                         <AppLink
                             target={target}

@@ -55,6 +55,7 @@ const Deprecated = () => {
                     text={article?.subtitle}
                     size={TextSize.L}
                 />
+
                 <HStack gap="8" className={cls.articleInfo}>
                     <Icon className={cls.icon} Svg={EyeIcon} />
                     <TextDeprecated text={String(article?.views)} />

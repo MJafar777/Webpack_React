@@ -40,31 +40,28 @@ export const useSidebarItems = () => {
             }),
             text: 'О сайте',
         },
+        {
+            path: getRouteArticles(),
+            Icon: toggleFeatures({
+                name: 'isAppRedesigned',
+                off: () => ArticleIconDeprecated,
+                on: () => ArticleIcon,
+            }),
+            text: 'Статьи',
+        },
     ];
 
     if (userData) {
-        sidebarItemsList.push(
-            {
-                path: getRouteProfile(userData.id),
-                Icon: toggleFeatures({
-                    name: 'isAppRedesigned',
-                    off: () => ProfileIconDeprecated,
-                    on: () => ProfileIcon,
-                }),
-                text: 'Профиль',
-                authOnly: true,
-            },
-            {
-                path: getRouteArticles(),
-                Icon: toggleFeatures({
-                    name: 'isAppRedesigned',
-                    off: () => ArticleIconDeprecated,
-                    on: () => ArticleIcon,
-                }),
-                text: 'Статьи',
-                authOnly: true,
-            },
-        );
+        sidebarItemsList.push({
+            path: getRouteProfile(userData.id),
+            Icon: toggleFeatures({
+                name: 'isAppRedesigned',
+                off: () => ProfileIconDeprecated,
+                on: () => ProfileIcon,
+            }),
+            text: 'Профиль',
+            authOnly: true,
+        });
     }
 
     return sidebarItemsList;

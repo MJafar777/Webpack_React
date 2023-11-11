@@ -1,3 +1,4 @@
+/* eslint-disable i18next/no-literal-string */
 import { useTranslation } from 'react-i18next';
 import React, { memo, useCallback, useState } from 'react';
 import { useSelector } from 'react-redux';
@@ -87,6 +88,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                         className={cls.links}
                         onClick={onShowModal}
                     >
+                        {}
                         {t('Войти')}
                     </Button>
                 }

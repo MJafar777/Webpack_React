@@ -74,6 +74,7 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
             )}
             hasFeedback
         />
+        
     );
 });
 
